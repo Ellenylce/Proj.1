@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="pt-BR"> <!---->
         <head> <!--isso é um comentário-->
             <meta contente="UTF=8"> <!--(meta tag)ler qualquer tipo de caracter-->
             <meta name="description"content ="alguma decrição"> <!--(meta tag)Descrever sobre o que é a página-->
@@ -8,20 +8,54 @@
 
             <title>Meu primeiro HTML</title>
             <link rel="shortcut icon" href="icone site.png" type="image/x-icon"> <!--por icone no título da página de navegação (logo da empresa por exemplo)-->
+            
+            <!--CONECTAR O CSS AO HTML-->
+            <link rel="stylesheet" href=" css/style.css">  <!--Chama o CSS (Externo) de outra página para essa pág do HTML
+            O ideal é que tenha uma página para o CSS e não embutir (CSS Embutido) ou inseri-lo em tags (CSS interno) na página index.com-->
+
+            <!-- CSS -->
             <style> 
                 body{ /*setando body*/
                     background-color:black; /*cor de fundo*/
                     color: white; /*cor da letra*/
                 }
+                .sublinhado{ /*Classe - chama a classe sublinhado com ".nomeDaClasse":O que receber a classe sublinhado vai receber essas regras*/
+                    text-decoration:underline;
+                }
+
+                .verde{ /*(.) - seletor: seleciona elementos no HTML por sua Classe (.nomeClasse)*/
+                    color:green;
+                }
+
+                #maiuscula{ /*ID: faz referência a um elemento por página*/
+                    text-transform: uppercase; /*letras maiusculas*/
+                }
+
+
+
             </style>
+
         </head>
         <body>
+            <a href="index.html">INICIO</a>
+            <a href="aula_css.html">CSS</a> <!--Ir para outra página: não é a forma ideal o ideal é que esteja em uma tag especifica - Nav-->
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe in exercitationem deleniti nesciunt doloremque! Sequi ut officiis magnam nesciunt debitis corporis commodi quia, in consectetur adipisci molestias quisquam incidunt tenetur!</p>
+                <ul>
+                    <li><p>Lorem</p></li>
+                </ul>
+            </div>
+
+            <h1 style="color:aqua;">Hello World</h1> <!--estou linkando o CSS dentro da tag-->
             <h1>Hello World</h1> <!--Título-->
             <p>Olá Mundo</p> <!--paragráfo (quebra linha usando tag <br> ou <pre>)
                  <pre> (preformatação: o texto sai como está visualizado no html: espaçamento, quebra de linha...)-->
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Praesentium veniam earum sunt ad iure tempora at deleniti temporibus vitae cupiditate dolorem, <!--lorem ipsum: gera texto aleatório -->
                 reiciendis nulla fugiat mollitia aliquam! Laudantium inventore modi eos?</p>
+            <p class="sublinhado verde" id="maiuscula"><span style="color: red;">L</span>ipsum dolor sit amet consectetur adipisicing elit. <!-- class="sublinhado: classe sublilhado criada"; class verde: classe verde aplicada- não precisa repetir o nome class novamente, é só separar as classes por espaço; span: é um elemento de nível inline, o que significa que ele ocupa apenas a largura necessária para o conteúdo dentro dele-->
+                    Praesentium veniam earum sunt ad iure tempora at deleniti temporibus vitae cupiditate dolorem, <!--lorem ipsum: gera texto aleatório -->
+                    reiciendis nulla fugiat mollitia aliquam! Laudantium inventore modi eos?</p>
             <hr> <!--cria linha horizontal-->
             <h1>Links</h1>
             <a href="https://www.globo.com" title="Site da globo">Visite o site da globo</a> <!--Âncorar link externos-->
@@ -30,6 +64,63 @@
             Self: carrega na mesma página-->
             <a heref="mailton:exemplo@gmail.com">Fale comigo</a> <!--direciona a pessoa para sua caixa de gmail pessoal com destinatario sugerido-->
             <a href="tell: 987389977">Ligue para mim</a> <!--direciona a pessoa ligar para o número-->
+
+            <hr> <!-- Linha Horizontal -->
+            <h1>Imagens</h1>
+            <a href="https://linkinpark.com">
+            <img src= "icone site.png" alt=" " width = "200px" heigth = "200px">
+            </a>
+            <!--src: especifica o caminho da imagem; 
+            alt: descrição da imagem caso ela não carregue; width: largura; heigth: altura-->
+            <!-- pode criar uma pasta para por as imagens e não deixá-las jogadas e mencionar o nome da pasta/ icone site.png; se estiver fora da pasta será representado ../ icone site.png (o ponto de referência é o index.html; estudar slid HTML: caminho relativo) -->
+
+            <!-- transformar imagem em um link -->
+            <!-- Envolve a tag <imag> com a tag <a> (âncora) -->
+
+            <!-- LISTAS NÃO ORDENADAS, ORDENADAS E DESCRITIVAS -->
+            <hr> <!--Linha Horizontal-->
+            <h1>Listas</h1>
+            <ul> <!--estrutura da lista não ordenada-->
+                <li>Arroz</li>
+                <li>Feijão</li>
+                <li>Açucar</li>
+            </ul>
+
+            <ol> <!--Lista Ordenada-->
+                <li>Futebol</li>
+                <li>Basquete</li>
+                <li>Volei</li>
+            </ol>
+
+            <dl> <!--Lista descritiva-->
+                <dt>HTML</dt> <!--Termo-->
+                <dd>um linguagem de marcação</dd> <!--Explicação-->
+                <dt>CSS</dt> <!--Termo-->
+                <dd>Uma linguagem de estilização</dd> <!--Explicação-->
+            </dl>
+
+            <!-- TABELAS -->
+             <hr> <!--Linha horizontal-->
+             <h1>Tabelas</h1>
+             <table> <!--estrura da tabela-->
+                <tr> <!-- 1 linha da tabela: table row-->
+                    <th>Nome</th> <!--table head: cabeçalho da tabela: 1 coluna-->
+                    <th>Email</th> <!--table head: cabeçalho da tabela: 2 coluna-->
+                </tr> 
+                <tr> <!--2 linha-->
+                    <td>Fulano</td>
+                    <td>fulano@gmail.com</td>
+                </tr>
+                <tr> <!--3 linha-->
+                    <td>Beltrano</td>
+                    <td>beltrano2gmail.com</td>
+                </tr>
+             </table>
+
+             <!-- estudar a diferença de DIV e Span -->
+              <!--<Div>é um elemento de nível de bloco, o que significa que ele ocupa toda a largura disponível do seu contêiner pai
+                <span>  é um elemento de nível inline, o que significa que ele ocupa apenas a largura necessária para o conteúdo dentro dele-->
+
             
         </body>
     </html>
