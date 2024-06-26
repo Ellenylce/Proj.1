@@ -10,10 +10,14 @@
             <link rel="shortcut icon" href="icone site.png" type="image/x-icon"> <!--por icone no título da página de navegação (logo da empresa por exemplo)-->
             
             <!--CONECTAR O CSS AO HTML-->
-            <link rel="stylesheet" href=" css/style.css">  <!--Chama o CSS (Externo) de outra página para essa pág do HTML
+            <link rel="stylesheet" href=" ../css/style.css">  <!--Chama o CSS (Externo) de outra página para essa pág do HTML
             O ideal é que tenha uma página para o CSS e não embutir (CSS Embutido) ou inseri-lo em tags (CSS interno) na página index.com-->
 
-            <!-- CSS -->
+            <!--COLOCAR ICONE NO SITE-->
+
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!--colocando icone no site do Google icon-->
+
+            <!-- CSS --> 
             <style> 
                 body{ /*setando body*/
                     background-color:black; /*cor de fundo*/
@@ -28,17 +32,19 @@
                 }
 
                 #maiuscula{ /*ID: faz referência a um elemento por página*/
-                    text-transform: uppercase; /*letras maiusculas*/
-                }
-
-
-
+                    text-transform: uppercase; /*letras maiusculas*/ 
+                } 
             </style>
 
+
+
         </head>
-        <body>
-            <a href="index.html">INICIO</a>
+        <body> <!--INSERINDO ICONE HOME-->
+            <nav>
+            <a href="index.html"><span class="material-symbols-outlined">home</span>INICIO</a>
             <a href="aula_css.html">CSS</a> <!--Ir para outra página: não é a forma ideal o ideal é que esteja em uma tag especifica - Nav-->
+            </nav>
+            
             <div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe in exercitationem deleniti nesciunt doloremque! Sequi ut officiis magnam nesciunt debitis corporis commodi quia, in consectetur adipisci molestias quisquam incidunt tenetur!</p>
                 <ul>
@@ -68,7 +74,7 @@
             <hr> <!-- Linha Horizontal -->
             <h1>Imagens</h1>
             <a href="https://linkinpark.com">
-            <img src= "icone site.png" alt=" " width = "200px" heigth = "200px">
+            <img src= "../imgs/icone_site.png" alt=" " width = "200px" heigth = "200px">
             </a>
             <!--src: especifica o caminho da imagem; 
             alt: descrição da imagem caso ela não carregue; width: largura; heigth: altura-->

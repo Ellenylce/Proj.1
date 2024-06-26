@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap'); /*google fonte - fontes importadas do google fonte na internet.*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+NG+Modern:wght@100..400&display=swap'); /*outra fonte importada*/
+:root {
+    --cor-primaria: #402E7A;
+    --cor-secundaria: #37b61d; /*paleta de cores*/
+    --cor-terciaria: #8d1827;
+
+}
+table, th, td{
+    border: 1px solid; 
+
+}
+*{
+    /*box-sizing: border-box;*/
+    font-family: "Playwrite NG Modern", cursive; /*adicionandoo fonte externa?*
+   /* font-family:'Times New Roman', Times, serif;*/
+}
+h1{
+    font-family: "Oswald", sans-serif;
+    text-align:center; /*centralizar texto*/
+}
+/* o seletor abaixo seleciona o body e muda a cor de fundo, a cor da letra e acrescenta uma margem no fundo */
+body {
+    background-color: #887ec64c;
+    color: var(--cor-primaria); /*aqui eu chamei a variavel da paleta*/
+    margin-bottom: 300px; /*margem inferior de 300px entre o outro elemento abaixo*/
+    background-image: url("../imgs/icone_site.png");
+    background-size:100px 100px; /*dimensão em largura e altura que a imagem de fundo terá*/
+    background-repeat: no-repeat; /*para não repetir a imagem preenchendo a tela toda*/
+    background-attachment: scroll; /*a imagem roda conforme a página roda*/
+    background-position: right top; /*posiciona imagem na parte superior a esquerda*/
+
+}
+
+.sublinhado {
+    text-decoration: underline;
+}
+.verde {
+    color: green;
+}
+#maiusculas { /*setando o Id*/
+    text-transform: uppercase;
+    
+}
+
+li::marker { /*marcadores*/
+    color: red;
+}
